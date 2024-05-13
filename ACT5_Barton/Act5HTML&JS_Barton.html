@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website for Job Application</title>
+    <link rel="stylesheet" href="Act5CSS_Barton.css">
+    <script src="https://kit.fontawesome.com/7ecd41c368.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+<div class="container">
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="header">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu"></i>
+    </nav>
+    <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hello, I'm <span>John Laurence</span><br>Barton From Philippines.</h1>
+    </div>
+</div>
+    </div>
+<!--------------about----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <br>
+                    <p>Welcome to my portfolio! Here you'll find a curated 
+                    collection of my design and development work. I 
+                    specialize in creating captivating digital experiences 
+                    that blend innovation with creativity. Join me on this 
+                    journey of bringing ideas to life.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <br>
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>App Development</span><br>Building Android/iOS app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <br>
+                        <ul>
+                            <li><span>2024 - current</span><br>Doing commission about web designing</li>
+                            <li><span>2023</span><br>Team Leader at 2R7 BSIT groupings USTP</li>
+                            <li><span>2022</span><br>Team Leader at 2R12 BSIT groupings USTP</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <br>
+                        <ul>
+                            <li><span>2024 - Current</span><br>IT Making website Training at University
+                            of Science and Technology of Southern Philippines</li>
+                            <li><span>2022-2023</span><br>Learning about HTML and CSS also C++ language
+                            at USTP</li>
+                            <li><span>2020 - 2021</span><br>Learning other skills aside from web Designer
+                            at the University of San Jose Talisayan Mis. Or. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------contact----------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope-circle-check"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>012345678901</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/dl.jpg" download class="btn btn2">Download pic</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ laurence. Made with a <i class="fa-solid fa-heart"></i> by Sponsebob</p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            }           
+    </script>
+
+    <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+
+</body>
+</html>
